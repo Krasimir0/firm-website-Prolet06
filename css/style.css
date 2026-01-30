@@ -1,0 +1,87 @@
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: transparent;
+  z-index: 50;
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin-left: 700px;
+  margin-top: 20px;
+}
+
+.header-logo {
+  position: absolute;
+  left: 21%;
+  top: 8%;
+  transform: translateX(-50%);
+  z-index: 60;
+}
+
+.header-logo img {
+  height: 200px;
+  width: auto;
+  display: block;
+}
+
+
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 24px;
+  font-size: 18px;
+}
+
+.site-header {
+  z-index: 20;
+}
+
+
+header {
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-logo {
+  height: 200px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 28px;
+  }
+}
+
+.nav-masthead .nav-link {
+  padding: 0.25rem 0;
+  font-weight: 500;
+  color: rgba(11, 11, 11, 0.6);
+  background-color: transparent;
+  border-bottom: 0.25rem solid transparent;
+   margin: 10px;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1.5rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
