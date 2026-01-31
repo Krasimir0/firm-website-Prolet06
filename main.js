@@ -1,16 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll(".nav-link");
+  const revealElements = document.querySelectorAll(".reveal");
 
-  navLinks.forEach(link => {
-    const linkPath = link.getAttribute("href");
-
-    // Normalize paths (important)
-    if (
-      currentPath === linkPath ||
-      (currentPath === "/" && linkPath === "/index.html")
-    ) {
-      link.classList.add("active");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
     }
-  });
+  );
+
+  revealElements.forEach((el) => observer.observe(el));
 });
