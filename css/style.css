@@ -1,3 +1,34 @@
+/* =========================
+   HEADER BUTTON LINKS
+========================= */
+.site-header .nav-link {
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.35);
+  transition: 
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* Hover */
+.site-header .nav-link:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.6);
+  transform: translateY(-1px);
+}
+
+/* Active page */
+.site-header .nav-link.active {
+  background: #c62828;
+  border-color: #c62828;
+  color: #ffffff;
+}
+
+
 @media (max-width: 900px) {
   .footer-container {
     grid-template-columns: 1fr;
@@ -364,12 +395,12 @@
 }
 
 .nav-masthead .nav-link {
-  padding: 0.25rem 0;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.7); /* light over dark images */
-  background-color: transparent;
-  border-bottom: 0.25rem solid transparent;
-  margin: 10px;
+    padding: -0.75rem 0;
+    font-weight: 500;
+    color: rgb(255 255 255);
+    background-color: #ee0c0c;
+    border-bottom: 0.25rem solid transparent;
+    margin: 10px;
 }
 
 .nav-masthead .nav-link:hover,
