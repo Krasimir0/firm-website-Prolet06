@@ -1,3 +1,43 @@
+.site-header.scrolled {
+  background: #0e0e0e;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.site-header.scrolled .header-logo img {
+  height: 64px;  
+  margin-top: 0;
+}
+
+
+
+
+.nav-masthead {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-masthead .nav-link {
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
+}
+
+.nav-masthead .nav-link:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-1px);
+}
+
+.nav-masthead .active {
+  background: #c62828;
+  border-color: #c62828;
+}
+
+
 /* =========================
    HEADER BUTTON LINKS
 ========================= */
@@ -349,40 +389,44 @@
 /* =========================
    HEADER
 ========================= */
+/* =========================
+   FIXED HEADER
+========================= */
 .site-header {
-  position: absolute;
+   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 80px;               /* STABLE */
+  z-index: 300;
   background: transparent;
-  z-index: 50;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header-inner {
+  max-width: 1300px;
   height: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
-  margin-left: 700px;
-  margin-top: 20px;
+  position: relative;
+  overflow: visible;   /* IMPORTANT */
 }
+
+
+
 
 /* LOGO */
-.header-logo {
-  position: absolute;
-  left: 13%;
-  top: 8%;
-  transform: translateX(-50%);
-  z-index: 60;
-}
 
 .header-logo img {
-  height: 200px;
-  width: auto;
-  display: block;
+    height: 200px;
+    margin-top: 116px;
+    transform-origin: left center;
+    transition: transform 0.35s, height 0.35s;
 }
+
 
 /* =========================
    NAVIGATION
