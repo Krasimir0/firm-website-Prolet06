@@ -28,3 +28,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   revealElements.forEach((el) => observer.observe(el));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const heroImg = document.querySelector(".page-hero-img");
+  if (!heroImg) return;
+
+  let scrollY = 0;
+
+  window.addEventListener("scroll", () => {
+    scrollY = window.scrollY;
+  });
+
+  function animateHero() {
+    const fadeDistance = window.innerHeight - 80; // header height
+    const progress = Math.min(scrollY / fadeDistance, 1);
+
+    heroImg.style.opacity = 1 - progress;
+    heroImg.style.transform = `translateY(${progress * -100}px)`;
+
+    requestAnimationFrame(animateHero);
+  }
+
+  animateHero();
+});
