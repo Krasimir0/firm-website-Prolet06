@@ -3,6 +3,134 @@ html, body {
   overflow-x: hidden;
   background: #111111; 
 }
+/* =========================
+   ABOUT INTRO (MATCH SITE STYLE)
+========================= */
+
+.about-intro {
+  background: #111111; /* same as your sections */
+  padding: 160px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+}
+
+.about-intro-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* RED SMALL TITLE */
+.about-intro-subtitle {
+  display: block;
+  color: #c62828; /* your red */
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* BIG BOLD HEADLINE */
+.about-intro-title {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1.05;
+  color: #ffffff; /* white like your headings */
+  margin-bottom: 50px;
+}
+
+/* PARAGRAPH */
+.about-intro-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #b5b5b5; /* same grey used across site */
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .about-intro {
+    padding: 120px 0;
+  }
+
+  .about-intro-title {
+    font-size: 2.8rem;
+  }
+
+  .about-intro-text {
+    font-size: 1rem;
+  }
+
+  .about-intro-container {
+    padding: 0 20px;
+  }
+}
+
+
+/* =========================
+   ABOUT PAGE STRUCTURE
+========================= */
+
+.about-section {
+  background: #111111;
+  padding: 140px 0;
+}
+
+.about-row {
+  max-width: 1300px;
+  margin: 0 auto 120px auto;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+/* Reverse layout */
+.about-row.reverse {
+  direction: rtl;
+}
+
+.about-row.reverse .about-text {
+  direction: ltr;
+}
+
+/* IMAGE */
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+/* TEXT */
+.about-text p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #cccccc;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .about-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+    padding: 0 20px;
+  }
+
+  .about-row.reverse {
+    direction: ltr;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+  }
+}
+
+
 
 /* =========================
    MOBILE ONLY
@@ -840,7 +968,8 @@ html, body {
 ========================= */
 @media (max-width: 768px) {
   .header-logo img {
-    height: 120px;
+    height: 64px;
+    margin-top: 0px;
   }
 
   .info-container {
