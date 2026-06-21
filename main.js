@@ -58,3 +58,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animateHero();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const templateParams = {
+      title: document.getElementById("title").value,
+      description: document.getElementById("description").value,
+      phone: document.getElementById("phone").value,
+    };
+
+    emailjs.send(
+      "service_cxn9teh",
+      templateParams
+    )
+    .then(() => {
+      alert("Message sent!");
+      form.reset();
+    })
+    .catch((error) => {
+      console.error("EmailJS error:", error);
+      alert("Error sending message");
+    });
+  });
+});
