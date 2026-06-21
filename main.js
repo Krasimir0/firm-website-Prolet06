@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     emailjs.send(
       "service_cxn9teh",
+      "template_2riomrt",
       templateParams
     )
     .then(() => {
