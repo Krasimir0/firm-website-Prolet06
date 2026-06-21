@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: document.getElementById("title").value,
       description: document.getElementById("description").value,
       phone: document.getElementById("phone").value,
+      email: document.getElementById("email").value,
     };
 
     emailjs.send(
